@@ -24,7 +24,7 @@ def fetch_url(url):
 
 def main(url_target):
     DRUPAL_URL = f"{url_target}/node/"
-    ids = range(1, 1001)
+    ids = range(1, 20000)
     urls = [f"{DRUPAL_URL}{id}" for id in ids]
 
     with ThreadPoolExecutor(max_workers=50) as executor:
